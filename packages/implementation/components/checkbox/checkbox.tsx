@@ -1,12 +1,15 @@
 import * as CheckBoxPrimitive from '@/core/primitives/checkbox/checkbox-primitive.tsx';
+import type { ReactNode } from 'react';
 
-export default function Checkbox() {
+interface CheckboxProps {
+  labelText: ReactNode;
+}
+
+export default function Checkbox({ labelText }: CheckboxProps) {
   return (
     <CheckBoxPrimitive.Root id={'check-box-1'}>
-      <CheckBoxPrimitive.CheckboxIndicator>
-        <input type={'checkbox'} />
-      </CheckBoxPrimitive.CheckboxIndicator>
-      <label htmlFor={'check-box-1'}>demo-checkbox</label>
+      <CheckBoxPrimitive.Indicator>checked!</CheckBoxPrimitive.Indicator>
+      <label htmlFor={'check-box-1'}>{labelText}</label>
     </CheckBoxPrimitive.Root>
   );
 }

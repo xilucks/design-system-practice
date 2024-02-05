@@ -68,10 +68,10 @@
     "noUnusedParameters": true
   },
   "include": [
-    "./package/**/*.ts",
-    "./package/**/*.tsx"
+    "./packages/**/*.ts",
+    "./packages/**/*.tsx"
   ],
   "exclude": [
-    "./package/**/*.stories.*"
+    "./packages/**/*.stories.*"
   ]
 }

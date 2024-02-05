@@ -1,0 +1,21 @@
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .checkbox-root {
+    padding: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    .checkbox-indicator {
+      color: #333;
+      height: 100%;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    color: #333;
+  }
+}

@@ -1,4 +1,4 @@
-import * as CheckBoxPrimitive from '@/core/primitive/checkbox/checkbox-primitive.tsx';
+import * as CheckBoxPrimitive from '@/core/primitives/checkbox/checkbox-primitive.tsx';
 
 export default function Checkbox() {
   return (

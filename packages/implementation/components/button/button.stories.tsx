@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react';
 import './Button.scss'; // 스타일 파일 import
 
 const meta: Meta = {
-  title: 'implementation/Button',
+  title: 'implementation/button',
   component: Button,
   parameters: {
     layout: 'centered',

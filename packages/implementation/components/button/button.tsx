@@ -1,7 +1,8 @@
 import ButtonPrimitive from '@/core/primitives/button/button-primitive.tsx';
 import type { ReactNode } from 'react';
+import './Button.scss'; // 스타일 파일 import
 
-interface ButtonProps {
+export interface ButtonProps {
   disabled?: boolean;
   color?: 'primary' | 'red' | string;
   type?: 'button' | 'submit';
@@ -9,6 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
   children?: ReactNode;
 }
+
 export default function Button({
   disabled = false,
   color = 'primary',
@@ -17,10 +19,12 @@ export default function Button({
   onClick,
   children,
 }: ButtonProps) {
+  const buttonClassName = `button ${color}`;
+
   return (
     <ButtonPrimitive
       disabled={disabled}
-      className={color}
+      className={buttonClassName}
       type={type}
       ariaLabel={ariaLabel}
       onClick={onClick}

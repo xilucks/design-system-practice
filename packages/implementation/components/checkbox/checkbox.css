@@ -1,3 +1,4 @@
+@import "packages/core/tokens/color.css";
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -5,7 +6,7 @@
 }
 .checkbox-container .checkbox-root {
   padding: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
 }
 .checkbox-container .checkbox-root .checkbox-indicator {

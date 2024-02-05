@@ -1,14 +1,14 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface ButtonPrimitiveProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  label?: string;
+  ariaLabel?: string;
   children: ReactNode;
 }
 
-export default function ButtonPrimitive({ label, children, ...props }: ButtonPrimitiveProps) {
+export default function ButtonPrimitive({ ariaLabel, children, ...props }: ButtonPrimitiveProps) {
   return (
     <button
-      aria-label={label}
+      aria-label={ariaLabel}
       {...props}
     >
       {children}

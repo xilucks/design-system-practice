@@ -1,0 +1,26 @@
+@import '/packages/core/tokens/color.css';
+@import '/packages/core/tokens/radius.css';
+@import '/packages/core/tokens/font-weight.css';
+
+.button {
+  // 공통 스타일
+  padding: 10px 20px;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: var(--radius-medium);
+  font-weight: var(--font-weight-bold);
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+}
+
+.button.error {
+  background-color: var(--error-color);
+}
+
+.button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

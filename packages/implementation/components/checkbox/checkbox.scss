@@ -1,0 +1,27 @@
+@import '/packages/core/tokens/color.css';
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+
+  .checkbox-root {
+    background-color: var(--card-background-color);
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .checkbox-indicator {
+      color: #333;
+    }
+  }
+
+  label {
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 1;
+    color: #333;
+  }
+}

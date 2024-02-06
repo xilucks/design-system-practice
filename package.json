@@ -1,10 +1,9 @@
 {
-  "name": "design-system-practice",
+  "name": "design-system-boilerplate",
   "private": true,
   "version": "0.1.0",
-  "description": "design system practice with react and ",
-  "author": "rayyamhk",
-  "license": "MIT",
+  "description": "design system boilerplate with react and radix-ui",
+  "author": "siun",
   "type": "module",
   "files": [
     "dist"

@@ -1,13 +1,12 @@
-import React from 'react';
-import Flex, { type FlexProps } from './flex';
+import Flex, { type FlexProps } from './index';
 import { type Meta } from '@storybook/react';
 
-export default {
+const meta = {
   title: 'layouts/Flex',
   component: Flex,
   parameters: {
     layout: 'centered',
-    componentSubtitle: 'Flex 컴포넌트는 컴포넌트를 세로 혹은 가로로 정렬할 때 사용됩니다.',
+    componentSubtitle: 'Index 컴포넌트는 컴포넌트를 세로 혹은 가로로 정렬할 때 사용됩니다.',
     docs: {
       description: {
         component: '설정에 따라 정렬 방향, 간격 등을 조절할 수 있습니다.',
@@ -68,11 +67,14 @@ export default {
   },
 
   tags: ['autodocs'],
-} as Meta;
+} satisfies Meta<typeof Flex>;
 
-const Template = (args) => <Flex {...args} />;
+export default meta;
+
+const Template = (args: FlexProps) => <Flex {...args} />;
 
 export const Gap5AndRowWrapStart = Template.bind({});
+// @ts-ignore
 Gap5AndRowWrapStart.args = {
   gap: 5,
   alignContent: 'flex-start',
@@ -92,6 +94,7 @@ Gap5AndRowWrapStart.args = {
 };
 
 export const Gap10AndColumnWrapEnd = Template.bind({});
+// @ts-ignore
 Gap10AndColumnWrapEnd.args = {
   gap: 10,
   alignContent: 'flex-end',

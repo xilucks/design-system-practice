@@ -1,19 +1,18 @@
 {
   "name": "uni-choi-design-system",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.93",
   "description": "design system boilerplate with react and radix-ui",
   "author": "siun",
   "type": "module",
   "files": [
     "dist"
   ],
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": false,
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "style": "./dist/styles.css",
   "exports": {
     ".": {
       "import": {
@@ -25,6 +24,11 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./styles.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css",
+      "default": "./dist/style.css"
+    },
     "./css": "./dist/style.css"
   },
   "scripts": {
@@ -34,7 +38,7 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "build": "storybook build",
-    "build:lib": "tsc --p ./tsconfig.build.json && vite build",
+    "build:lib": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier . --write --ignore-unknown"
   },

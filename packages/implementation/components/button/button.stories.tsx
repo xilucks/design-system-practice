@@ -1,8 +1,7 @@
-import Button, { type ButtonProps } from './Button';
+import Button, { type ButtonProps } from './index';
 import type { Meta } from '@storybook/react';
 
 import './Button.scss';
-import React from 'react';
 
 const meta: Meta = {
   title: 'implementation/button',
@@ -36,19 +35,19 @@ export const Primary = Template.bind({});
 // @ts-ignore
 Primary.args = {
   color: 'primary',
-  children: 'Primary Button',
+  children: 'Primary Index',
 };
 
 export const Error = Template.bind({});
 // @ts-ignore
 Error.args = {
   color: 'error',
-  children: 'Error Button',
+  children: 'Error Index',
 };
 
 export const Disabled = Template.bind({});
 // @ts-ignore
 Disabled.args = {
   disabled: true,
-  children: 'Disabled Button',
+  children: 'Disabled Index',
 };

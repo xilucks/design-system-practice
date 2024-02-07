@@ -9,11 +9,10 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths(), dfs()],
   build: {
     lib: {
-      entry: {
-        components: path.resolve(__dirname, './packages/implementation/components/index.ts'),
-      },
+      entry: path.resolve(__dirname, './packages/index.ts'),
       name: 'uni.choi-DesignSystem',
-      fileName: (format) => `index.${format}.js`,
+      fileName: 'index',
+      formats: ['es', 'umd'],
     },
     outDir: 'dist',
     rollupOptions: {

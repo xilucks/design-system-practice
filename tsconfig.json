@@ -32,13 +32,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["packages/*"]
-    },
-    "outDir": "./dist"
+    }
   },
-  "include": [
-    "./packages/**/*.ts",
-    "./packages/**/*.tsx"
-  ],
+  "include": ["packages"],
   "exclude": [
     "./packages/**/*.stories.*"
   ]

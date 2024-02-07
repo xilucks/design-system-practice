@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Checkbox, { type CheckboxProps } from './checkbox';
-import Button from '../button/Button';
 import type { Meta } from '@storybook/react';
 import Flex from '../../layouts/flex/flex';
+import { Button } from '../button';
 
 const meta = {
   title: 'implementation/checkbox',

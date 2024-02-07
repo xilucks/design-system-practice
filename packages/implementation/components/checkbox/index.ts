@@ -1,1 +1,1 @@
-export * from './checkbox.tsx';
+export { default as Checkbox } from './checkbox.tsx';

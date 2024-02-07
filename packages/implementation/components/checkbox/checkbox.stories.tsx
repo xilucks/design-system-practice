@@ -116,6 +116,6 @@ RequiredTextbox.args = {
   name: 'required-checkbox',
   value: 'checkbox1',
   labelText: 'Required CheckBox',
-  require: true,
+  required: true,
   onChange: () => {},
 };

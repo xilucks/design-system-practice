@@ -26,7 +26,7 @@ export default function Button({
   return (
     <ButtonPrimitive
       disabled={disabled}
-      className={buttonClassName}
+      className={'bg-black'}
       type={type}
       ariaLabel={ariaLabel}
       onClick={onClick}

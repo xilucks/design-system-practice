@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta } from '@storybook/react';
-import Index from '../../layouts/flex';
+import Flex from '../../layouts/flex';
 import Checkbox, { type CheckboxProps } from './index';
 import Button from '../button';
 
@@ -75,7 +75,7 @@ const RequiredTemplate = (args: CheckboxProps) => {
   };
 
   return (
-    <Index gap={10}>
+    <Flex gap={10}>
       <Checkbox
         name="test1"
         value="test1"
@@ -89,7 +89,7 @@ const RequiredTemplate = (args: CheckboxProps) => {
       >
         제출
       </Button>
-    </Index>
+    </Flex>
   );
 };
 
@@ -98,7 +98,7 @@ export const DefaultTextbox = Template.bind({});
 DefaultTextbox.args = {
   name: 'default-checkbox',
   value: 'checkbox1',
-  labelText: 'Default Index',
+  labelText: 'Default Flex',
 };
 
 export const DisabledTextbox = Template.bind({});
@@ -106,7 +106,7 @@ export const DisabledTextbox = Template.bind({});
 DisabledTextbox.args = {
   name: 'disabled-checkbox',
   value: 'checkbox1',
-  labelText: 'Disabled Index',
+  labelText: 'Disabled Flex',
   disabled: true,
 };
 

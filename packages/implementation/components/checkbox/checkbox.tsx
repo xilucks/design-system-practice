@@ -1,32 +1,48 @@
-// Checkbox.tsx
-
 'use client';
 
 import * as CheckBoxPrimitive from '@/core/primitives/checkbox/checkbox-primitive.tsx';
-import type { ReactNode } from 'react';
 import { useState } from 'react';
+import { CheckIcon } from '@radix-ui/react-icons';
 import './checkbox.scss';
+import type { CheckboxProps as CheckboxPrimitiveProps } from '@radix-ui/react-checkbox';
 
-interface CheckboxProps {
-  onCheckedChange?: () => void;
-  labelText: ReactNode;
+interface CheckboxProps extends CheckboxPrimitiveProps {
+  onChange: () => void;
+  labelText: string;
 }
 
-export default function Checkbox({ onCheckedChange = () => {}, labelText }: CheckboxProps) {
-  const [checked, setChecked] = useState<boolean>(false);
+export default function Checkbox({
+  defaultChecked = false,
+  onChange = () => {},
+  disabled = false,
+  required = false,
+  name,
+  value,
+  labelText,
+}: CheckboxProps) {
+  const [isChecked, setIsChecked] = useState(defaultChecked);
+  const handleCheckBoxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <div className="checkbox-container">
       <CheckBoxPrimitive.Root
         className="checkbox-root"
         id="check-box-1"
-        checked={checked}
+        defaultChecked={defaultChecked}
+        checked={isChecked}
+        disabled={disabled}
+        required={required}
+        name={name}
+        value={value}
         onCheckedChange={() => {
-          setChecked(!checked);
-          onCheckedChange();
+          onChange();
+          handleCheckBoxChange();
         }}
       >
         <CheckBoxPrimitive.Indicator className="checkbox-indicator">
-          check!
+          <CheckIcon />
         </CheckBoxPrimitive.Indicator>
       </CheckBoxPrimitive.Root>
       <label htmlFor="check-box-1">{labelText}</label>

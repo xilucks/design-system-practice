@@ -1,20 +1,24 @@
-@import "packages/core/tokens/color.css";
+@import '/packages/core/tokens/color.css';
 .checkbox-container {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 .checkbox-container .checkbox-root {
-  padding: 4px;
-  border: 1px solid var(--primary-color);
-  cursor: pointer;
+  background-color: var(--card-background-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .checkbox-container .checkbox-root .checkbox-indicator {
   color: #333;
-  height: 100%;
 }
 .checkbox-container label {
-  font-size: 14px;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
   color: #333;
 }
 

@@ -1,6 +1,8 @@
+'use client';
+
 import ButtonPrimitive from '@/core/primitives/button/button-primitive.tsx';
 import type { ReactNode } from 'react';
-import './Button.scss'; // 스타일 파일 import
+import './Button.scss';
 
 export interface ButtonProps {
   disabled?: boolean;

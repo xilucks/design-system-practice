@@ -1,6 +1,6 @@
-@import "packages/core/tokens/color.css";
-@import "packages/core/tokens/radius.css";
-@import "packages/core/tokens/font-weight.css";
+@import '/packages/core/tokens/color.css';
+@import '/packages/core/tokens/radius.css';
+@import '/packages/core/tokens/font-weight.css';
 .button {
   padding: 10px 20px;
   border: none;

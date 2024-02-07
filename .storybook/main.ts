@@ -1,6 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import { withoutVitePlugins } from '@storybook/builder-vite';
-import * as path from 'path';
 
 const config: StorybookConfig = {
   framework: {
@@ -21,7 +20,7 @@ const config: StorybookConfig = {
     return {
       ...config,
 
-      plugins: await withoutVitePlugins(plugins, ['vite:dts']), // skip dts plugin
+      plugins: await withoutVitePlugins(plugins, ['vite:dts']),
     };
   },
 };

@@ -1,7 +1,8 @@
 import Button, { type ButtonProps } from './Button';
 import type { Meta } from '@storybook/react';
 
-import './Button.scss'; // 스타일 파일 import
+import './Button.scss';
+import React from 'react';
 
 const meta: Meta = {
   title: 'implementation/button',
@@ -23,6 +24,8 @@ const meta: Meta = {
       },
     },
   },
+
+  tags: ['autodocs'],
 };
 
 export default meta;

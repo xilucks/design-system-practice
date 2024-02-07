@@ -6,7 +6,7 @@ import { CheckIcon } from '@radix-ui/react-icons';
 import './checkbox.scss';
 import type { CheckboxProps as CheckboxPrimitiveProps } from '@radix-ui/react-checkbox';
 
-interface CheckboxProps extends CheckboxPrimitiveProps {
+export interface CheckboxProps extends CheckboxPrimitiveProps {
   onChange: () => void;
   labelText: string;
 }

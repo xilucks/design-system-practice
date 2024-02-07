@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import Checkbox from './checkbox';
+import Checkbox, { type CheckboxProps } from './checkbox';
 import Button from '../button/Button';
 import type { Meta } from '@storybook/react';
 import Flex from '../../layouts/flex/flex';
-import { type CheckboxProps } from '@radix-ui/react-checkbox';
 
 const meta = {
   title: 'implementation/checkbox',
@@ -61,12 +60,12 @@ const meta = {
 
 export default meta;
 
-const Template = (args) => <Checkbox {...args} />;
-const RequiredTemplate = (args) => {
+const Template = (args: CheckboxProps) => <Checkbox {...args} />;
+const RequiredTemplate = (args: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleSubmit = () => {
-    if (args.require && !isChecked) {
+    if (args.required && !isChecked) {
       // @ts-ignore
       alert('체크박스를 선택해주세요!');
     } else {
@@ -82,7 +81,7 @@ const RequiredTemplate = (args) => {
         value="test1"
         labelText="test1"
         onChange={() => setIsChecked(!isChecked)}
-        required={args.require}
+        required={args.required}
       />
       <Button
         type="submit"
